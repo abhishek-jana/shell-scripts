@@ -1,0 +1,19 @@
+#!/bin/bash
+# case example
+case $1 in
+  work)
+    ssh hep13
+    ;;
+  work-jupyter)
+    ssh -L 8000:localhost:8000 hep13
+    ;;
+  home)
+    ssh abhishek@legion
+    ;;
+  home-jupyter)
+    ssh -L 8000:localhost:8000 abhishek@legion
+    ;;
+  *)
+    echo Invalid Entry!
+  ;;
+esac
